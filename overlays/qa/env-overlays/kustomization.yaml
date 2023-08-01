@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
--  ../../namespaces
+-  ../../../namespaces
 
 patches:
-- path: ./namespaces/asm-label.yaml
+- path: asm-label.yaml
   target:
     kind: Namespace
     labelSelector: ns-type=tenant
